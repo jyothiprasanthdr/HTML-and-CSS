@@ -1,0 +1,23 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  padding: 2rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+ul li {
+  margin-bottom: 2rem;
+}
+
+img {
+  width: 100%;
+}
