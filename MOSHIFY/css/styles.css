@@ -115,6 +115,7 @@ a {
 .badge--small {
   font-size: 1.6rem;
   padding: 0.5rem 1.5rem;
+  margin: 2rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -322,11 +323,18 @@ a {
   color: white;
 }
 
+.card--primary .badge--primary {
+  background-color: #126de4;
+}
+
 .card--secondary .badge--secondary {
   background: #02cdf1;
 }
 
 /* Plans */
+.plan {
+  transition: transform 0.2s ease-out;
+}
 
 .plan__name {
   color: #fff;
@@ -346,14 +354,18 @@ a {
 }
 
 .plan__desc {
+  display: block;
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 1px;
-  display: block;
 }
 
 .plan .list__item {
   margin-bottom: 2rem;
+}
+
+.plan--popular {
+  transform: scale(1.1);
 }
 
 .plan--popular .card__header {
@@ -367,6 +379,14 @@ a {
   position: absolute;
   top: -6px;
   right: 5%;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px) {
@@ -724,5 +744,38 @@ a {
 @media screen and (min-width: 768px) {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
+/* Plan block */
+
+.block--plans .grid {
+  gap: 8rem 4rem;
+}
+
+.block--plans .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+/* features */
+
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0rem;
+}
+.feature__heading {
+  margin: 1rem 0;
+}
+.feature__image {
+  width: 100%;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
   }
 }
